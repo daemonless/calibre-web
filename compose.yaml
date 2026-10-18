@@ -1,0 +1,87 @@
+name: calibre-web
+
+x-daemonless:
+  title: "Calibre-Web"
+  icon: ":material-book-open-page-variant:"
+  category: "Media Servers"
+  description: "Calibre-Web is a web app providing a clean interface for browsing, reading, and downloading eBooks using an existing or new Calibre database."
+  upstream_url: "https://github.com/janeczku/calibre-web"
+  web_url: "https://github.com/janeczku/calibre-web"
+  freshports_url: "https://www.freshports.org/www/py-calibreweb/"
+  user: "bsd"
+  mlock: false
+  appjail: true
+  cli: [cps]
+  community: "Discord:https://discord.gg/Kb9tkhecZT"
+
+  docs:
+    env:
+      PUID: "User ID for the application process"
+      PGID: "Group ID for the application process"
+      TZ: "Timezone for the container"
+      CALIBRE_ADMIN_USER:
+        desc: "Admin username to update on startup when paired with CALIBRE_ADMIN_PASSWORD (default: admin)"
+        optional: true
+      CALIBRE_ADMIN_PASSWORD:
+        desc: "Admin password to set on startup"
+        optional: true
+      CALIBRE_HOST:
+        desc: "Address the web server listens on (default: 0.0.0.0)"
+        optional: true
+      OAUTHLIB_RELAX_TOKEN_SCOPE:
+        desc: "Set to 1 to allow Google OAuth to work when token scopes change"
+        optional: true
+    volumes:
+      /config: "Where Calibre-Web stores its internal database (app.db), cache, and settings"
+      /books: "Where your Calibre library (metadata.db and book folders) is located"
+    ports:
+      8083: "Web UI"
+
+  notes: |
+    ## Initial Setup & Default Login
+
+    The Web UI is available at `http://your-ip:8083`.
+
+    **Default admin login:**
+    * **Username:** `admin`
+    * **Password:** `admin123`
+
+    Change the default password immediately after signing in, or set `CALIBRE_ADMIN_PASSWORD` in your environment.
+
+    If `/books` is empty on first boot, a clean starter `metadata.db` is created automatically and `/books` is pre-configured as your Calibre library with uploads enabled. If you mount an existing Calibre library containing `metadata.db` at `/books`, it is linked automatically on first boot.
+
+    ## Resetting a Forgotten Password
+
+    `cps` is wrapped with `daemonless-cli` and `CALIBRE_DBPATH=/config` is set in the container environment, so you can reset any user's password directly as the `bsd` user:
+
+    ```sh
+    podman exec -it calibre-web cps -s <user>:<pass>
+    ```
+
+    ## Included External Binaries
+
+    * **Kepubify** (`/usr/local/bin/kepubify`) for EPUB-to-KEPUB conversion and **Unrar** (`/usr/local/bin/unrar`) for CBR comic extraction are installed and pre-configured in `/config/app.db`.
+
+    ## Migrating from LinuxServer (`lscr.io/linuxserver/calibre-web`)
+
+    This image uses the same `/config` and `/books` volume layout as `linuxserver/calibre-web`. Copy your `/config` and `/books` directories to your FreeBSD host; on startup, the init script automatically updates Linux `/usr/bin/kepubify` and `/usr/bin/unrar` paths in `app.db` to `/usr/local/bin`.
+
+    The image never changes ownership inside `/books`: the library must be writable by `PUID`/`PGID`. A library carried over from LinuxServer is owned by the `PUID` it ran with; use the same one here, or `chown -R` it once before the first start.
+
+services:
+  calibre-web:
+    image: ghcr.io/daemonless/calibre-web:latest
+    container_name: calibre-web
+    restart: always
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+
+    volumes:
+      - /path/to/containers/calibre-web:/config
+      - /path/to/calibre/library:/books
+
+    ports:
+      - 8083:8083

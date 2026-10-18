@@ -1,0 +1,71 @@
+#!/bin/sh
+# Initialize Calibre-Web configuration and database
+set -e
+
+export HOME=/config
+export CALIBRE_DBPATH=/config
+export CACHE_DIRECTORY=/config/cache
+
+PY=$(head -1 /usr/local/bin/cps | sed 's/^#!//')
+
+mkdir -p /config /config/cache /books
+
+# Create Google Drive client_secrets.json stub if missing (matches LinuxServer)
+if [ ! -f /config/client_secrets.json ]; then
+    echo "{}" > /config/client_secrets.json
+fi
+
+# Seed a clean starter Calibre metadata.db if /books is completely empty
+if [ ! -f /books/metadata.db ] && [ -z "$(ls -A /books 2>/dev/null)" ] && [ -f /usr/local/share/calibre-web/metadata.db.empty ]; then
+    echo "[calibre-web] Empty /books directory detected, seeding starter metadata.db..."
+    cp /usr/local/share/calibre-web/metadata.db.empty /books/metadata.db
+    chown bsd:bsd /books /books/metadata.db
+fi
+
+# /books is the user's library: never chown it recursively (slow on big or NFS
+# libraries, and it takes the files from a desktop Calibre sharing them)
+chown -R bsd:bsd /config
+
+# First-time run: create /config/app.db and /config/.key
+if [ ! -f /config/app.db ]; then
+    echo "[calibre-web] First-time run, creating /config/app.db..."
+    /usr/local/bin/s6-setuidgid bsd /usr/local/bin/cps -p /config/app.db -g /config/gdrive.db -d >/dev/null 2>&1 || true
+
+    if [ -f /config/app.db ] && [ -f /books/metadata.db ]; then
+        "${PY}" - <<'EOF'
+import sqlite3
+with sqlite3.connect("/config/app.db") as conn:
+    conn.execute(
+        "UPDATE settings SET config_calibre_dir='/books', config_uploading=1 "
+        "WHERE config_calibre_dir IS NULL OR LENGTH(config_calibre_dir)=0"
+    )
+EOF
+    fi
+fi
+
+# Ensure kepubify and unrar paths point to /usr/local/bin (and migrate Linux /usr/bin paths)
+if [ -f /config/app.db ]; then
+    "${PY}" - <<'EOF'
+import sqlite3
+with sqlite3.connect("/config/app.db") as conn:
+    conn.execute(
+        "UPDATE settings SET config_kepubifypath='/usr/local/bin' "
+        "WHERE config_kepubifypath IS NULL OR LENGTH(config_kepubifypath)=0 "
+        "OR config_kepubifypath IN ('/usr/bin/kepubify', '/usr/bin')"
+    )
+    conn.execute(
+        "UPDATE settings SET config_rarfile_location='/usr/local/bin' "
+        "WHERE config_rarfile_location IS NULL OR LENGTH(config_rarfile_location)=0 "
+        "OR config_rarfile_location IN ('/usr/bin/unrar', '/usr/bin')"
+    )
+EOF
+fi
+
+# Optional: update admin password if CALIBRE_ADMIN_PASSWORD is set
+if [ -n "${CALIBRE_ADMIN_PASSWORD}" ] && [ -f /config/app.db ]; then
+    ADMIN_USER="${CALIBRE_ADMIN_USER:-admin}"
+    echo "[calibre-web] Setting password for user '${ADMIN_USER}'..."
+    /usr/local/bin/s6-setuidgid bsd /usr/local/bin/cps -p /config/app.db -s "${ADMIN_USER}:${CALIBRE_ADMIN_PASSWORD}" >/dev/null 2>&1 || \
+        echo "[calibre-web] WARNING: Could not update password for '${ADMIN_USER}'"
+fi
+

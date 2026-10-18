@@ -1,0 +1,70 @@
+ARG BASE_VERSION=15.1
+FROM ghcr.io/daemonless/base:${BASE_VERSION}
+
+ARG FREEBSD_ARCH=amd64
+ARG PKG_NAME="py312-calibreweb"
+ARG PACKAGES="${PKG_NAME} kepubify unrar"
+
+LABEL org.opencontainers.image.title="{{ title }}" \
+      org.opencontainers.image.description="{{ description }}" \
+      org.opencontainers.image.source="{{ repo_url }}" \
+      org.opencontainers.image.url="{{ web_url }}" \
+      org.opencontainers.image.documentation="https://github.com/janeczku/calibre-web/wiki" \
+      org.opencontainers.image.licenses="GPL-3.0-or-later" \
+      org.opencontainers.image.vendor="daemonless" \
+      org.opencontainers.image.authors="daemonless" \
+      io.daemonless.category="{{ category }}" \
+{%- if ports %}
+      io.daemonless.port="{{ ports[0].port }}" \
+{%- endif %}
+{%- if volumes %}
+      io.daemonless.volumes="{{ volumes | map(attribute='path') | join(',') }}" \
+{%- endif %}
+      io.daemonless.arch="${FREEBSD_ARCH}" \
+      io.daemonless.pkg-source="pkg" \
+      io.daemonless.packages="${PACKAGES}" \
+      io.daemonless.pkg-name="${PKG_NAME}"
+
+ENV CALIBRE_DBPATH="/config" \
+    CACHE_DIRECTORY="/config/cache" \
+    PYTHONDONTWRITEBYTECODE="1" \
+    PYTHONUNBUFFERED="1"
+
+# Install Calibre-Web and external binaries (kepubify, unrar)
+# ImageMagick7's dependencies drag in toolchains nothing here runs:
+# openexr -> Imath -> numpy -> openblas -> gcc14 + binutils (+ boost-libs), and
+# libheif -> ffmpeg -> sdl2 -> mesa-libs -> llvm (~2.8 GB). Wand covers, PDF
+# rendering (ghostscript) and every ImageMagick coder still link without them.
+# pkg delete fails when no pattern matches, so list what is installed first.
+RUN pkg update && \
+    pkg install -y ${PACKAGES} && \
+    DROP=$(pkg query -g '%n' 'llvm[0-9]*' 'spirv-llvm-translator-*' 'gcc[0-9]*' binutils \
+        'py3*-numpy' openblas boost-libs 'py3*-boost-libs' 2>/dev/null || true) && \
+    if [ -n "${DROP}" ]; then pkg delete -fy ${DROP}; fi && \
+    /usr/local/bin/python3.12 -c 'import wand.image' && \
+    sed -i '' 's/^UPDATER_AVAILABLE = True/UPDATER_AVAILABLE = False/' \
+        /usr/local/lib/python3.12/site-packages/calibreweb/cps/constants.py && \
+    grep -q '^UPDATER_AVAILABLE = False' /usr/local/lib/python3.12/site-packages/calibreweb/cps/constants.py && \
+    mkdir -p /app /config /config/cache /books && \
+    pkg query '%v' ${PKG_NAME} > /app/version && \
+    chown -R bsd:bsd /app /config /books && \
+    pkg clean -ay && \
+    rm -rf /var/cache/pkg/* /var/db/pkg/repos/* && \
+    find /usr/local -name '*.a' -delete && \
+    rm -rf /usr/local/share/doc /usr/local/share/man /usr/local/include
+
+# Copy root filesystem
+COPY root/ /
+
+# Set permissions
+RUN chmod +x /etc/services.d/calibre-web/run /etc/cont-init.d/* /healthz
+
+# --- Expose (Injected by Generator) ---
+{%- if ports %}
+EXPOSE {{ ports | map(attribute='port') | join(' ') }}
+{%- endif %}
+
+# --- Volumes (Injected by Generator) ---
+{%- if volumes %}
+VOLUME {{ volumes | map(attribute='path') | join(' ') }}
+{%- endif %}

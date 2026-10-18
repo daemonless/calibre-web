@@ -1,0 +1,28 @@
+# dbuild configuration file
+# Place in .daemonless/config.yaml or .dbuild.yaml (higher priority)
+#
+# Full reference: https://github.com/daemonless/dbuild
+
+icon: ':material-book-open-page-variant:'
+
+build:
+  architectures:
+    - amd64
+    - aarch64
+  variants:
+    - tag: pkg
+      containerfile: Containerfile.pkg
+      tag_desc: "**FreeBSD Quarterly**. Uses stable, tested packages."
+    - tag: pkg-latest
+      containerfile: Containerfile.pkg
+      aliases: ["latest"]
+      default: true
+      args:
+        BASE_VERSION: "15.1-latest"
+      tag_desc: "**FreeBSD Latest**. Rolling package updates."
+
+cit:
+  mode: screenshot
+  port: 8083
+  health: /login
+  ready: "Starting Tornado server|Starting Gevent server|server started on"
