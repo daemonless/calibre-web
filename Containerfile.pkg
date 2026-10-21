@@ -9,7 +9,8 @@ FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PKG_NAME="py312-calibreweb"
-ARG PACKAGES="${PKG_NAME} kepubify unrar"
+# flask-simpleldap enables LDAP login (cps/services: skipped if it can't import).
+ARG PACKAGES="${PKG_NAME} kepubify unrar py312-flask-simpleldap"
 
 LABEL org.opencontainers.image.title="Calibre-Web" \
       org.opencontainers.image.description="Calibre-Web is a web app providing a clean interface for browsing, reading, and downloading eBooks using an existing or new Calibre database." \
@@ -43,7 +44,7 @@ RUN pkg update && \
     DROP=$(pkg query -g '%n' 'llvm[0-9]*' 'spirv-llvm-translator-*' 'gcc[0-9]*' binutils \
         'py3*-numpy' openblas boost-libs 'py3*-boost-libs' 2>/dev/null || true) && \
     if [ -n "${DROP}" ]; then pkg delete -fy ${DROP}; fi && \
-    /usr/local/bin/python3.12 -c 'import wand.image' && \
+    /usr/local/bin/python3.12 -c 'import wand.image, ldap, flask_simpleldap' && \
     sed -i '' 's/^UPDATER_AVAILABLE = True/UPDATER_AVAILABLE = False/' \
         /usr/local/lib/python3.12/site-packages/calibreweb/cps/constants.py && \
     grep -q '^UPDATER_AVAILABLE = False' /usr/local/lib/python3.12/site-packages/calibreweb/cps/constants.py && \
