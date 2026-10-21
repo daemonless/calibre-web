@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-19T00:33:28Z",
+  "generated": "2026-10-21T17:34:52Z",
   "image": "calibre-web",
   "tags": {
     "pkg-aarch64": {
       "app_version": "0.6.27_1",
       "arch": "aarch64",
-      "generated": "2026-10-19T00:32:12Z",
+      "generated": "2026-10-21T17:33:22Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -196,7 +196,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -245,7 +245,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -318,6 +318,13 @@
             ],
             "name": "cups",
             "version": "2.4.19_2"
+          },
+          {
+            "licenses": [
+              "BSD4CLAUSE"
+            ],
+            "name": "cyrus-sasl",
+            "version": "2.1.28_6"
           },
           {
             "licenses": [
@@ -1167,6 +1174,13 @@
           },
           {
             "licenses": [
+              "OPENLDAP"
+            ],
+            "name": "openldap26-client",
+            "version": "2.6.15_1"
+          },
+          {
+            "licenses": [
               "BSD3CLAUSE"
             ],
             "name": "opus",
@@ -1405,6 +1419,13 @@
             "licenses": [
               "MIT"
             ],
+            "name": "py312-flask-simpleldap",
+            "version": "2.1.0"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
             "name": "py312-flask_limiter",
             "version": "4.1.1"
           },
@@ -1546,6 +1567,20 @@
           },
           {
             "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "py312-pyasn1",
+            "version": "0.6.4"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "py312-pyasn1-modules",
+            "version": "0.4.1"
+          },
+          {
+            "licenses": [
               "LGPL21"
             ],
             "name": "py312-pycountry",
@@ -1592,6 +1627,13 @@
             ],
             "name": "py312-python-dotenv",
             "version": "1.2.3"
+          },
+          {
+            "licenses": [
+              "PSFL"
+            ],
+            "name": "py312-python-ldap",
+            "version": "3.4.7"
           },
           {
             "licenses": [
@@ -2116,6 +2158,11 @@
             "version": "4.0.0"
           },
           {
+            "name": "flask-simpleldap",
+            "purl": "",
+            "version": "2.1.0"
+          },
+          {
             "name": "greenlet",
             "purl": "",
             "version": "3.5.6"
@@ -2206,6 +2253,16 @@
             "version": "26.3"
           },
           {
+            "name": "pyasn1",
+            "purl": "",
+            "version": "0.6.4"
+          },
+          {
+            "name": "pyasn1-modules",
+            "purl": "",
+            "version": "0.4.1"
+          },
+          {
             "name": "pycountry",
             "purl": "",
             "version": "26.2.16"
@@ -2239,6 +2296,11 @@
             "name": "python-dotenv",
             "purl": "",
             "version": "1.2.3"
+          },
+          {
+            "name": "python-ldap",
+            "purl": "",
+            "version": "3.4.7"
           },
           {
             "name": "python-magic",
@@ -2347,21 +2409,21 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 267,
+        "freebsd": 273,
         "go": 11,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 73,
+        "python": 77,
         "ruby": 0,
         "rust": 0,
-        "total": 351
+        "total": 361
       }
     },
     "pkg-latest-aarch64": {
       "app_version": "0.6.27_1",
       "arch": "aarch64",
-      "generated": "2026-10-19T00:32:17Z",
+      "generated": "2026-10-21T17:33:27Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2552,7 +2614,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -2601,7 +2663,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -2657,7 +2719,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
@@ -2673,7 +2735,14 @@
               "CUPS"
             ],
             "name": "cups",
-            "version": "2.4.19_2"
+            "version": "2.4.20"
+          },
+          {
+            "licenses": [
+              "BSD4CLAUSE"
+            ],
+            "name": "cyrus-sasl",
+            "version": "2.1.28_6"
           },
           {
             "licenses": [
@@ -3175,7 +3244,7 @@
               "LGPL3+"
             ],
             "name": "libheif",
-            "version": "1.22.2_5"
+            "version": "1.23.6"
           },
           {
             "licenses": [
@@ -3276,7 +3345,7 @@
               "LGPL20"
             ],
             "name": "librsvg2-rust",
-            "version": "2.62.3_2"
+            "version": "2.62.3_3"
           },
           {
             "licenses": [
@@ -3523,6 +3592,13 @@
           },
           {
             "licenses": [
+              "OPENLDAP"
+            ],
+            "name": "openldap26-client",
+            "version": "2.6.15_1"
+          },
+          {
+            "licenses": [
               "BSD3CLAUSE"
             ],
             "name": "opus",
@@ -3712,7 +3788,7 @@
               "BSD3CLAUSE"
             ],
             "name": "py312-click",
-            "version": "8.3.1"
+            "version": "8.5.0"
           },
           {
             "licenses": [
@@ -3720,7 +3796,7 @@
               "BSD3CLAUSE"
             ],
             "name": "py312-cryptography",
-            "version": "50.0.1,1"
+            "version": "50.0.1_1,1"
           },
           {
             "licenses": [
@@ -3756,6 +3832,13 @@
             ],
             "name": "py312-flask-babel",
             "version": "4.0.0_1"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "py312-flask-simpleldap",
+            "version": "2.1.0"
           },
           {
             "licenses": [
@@ -3875,7 +3958,7 @@
               "MIT"
             ],
             "name": "py312-nh3",
-            "version": "0.3.7_1"
+            "version": "0.3.7_2"
           },
           {
             "licenses": [
@@ -3899,6 +3982,20 @@
             ],
             "name": "py312-packaging",
             "version": "26.3"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "py312-pyasn1",
+            "version": "0.6.4"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "py312-pyasn1-modules",
+            "version": "0.4.1"
           },
           {
             "licenses": [
@@ -3948,6 +4045,13 @@
             ],
             "name": "py312-python-dotenv",
             "version": "1.2.3"
+          },
+          {
+            "licenses": [
+              "PSFL"
+            ],
+            "name": "py312-python-ldap",
+            "version": "3.4.7"
           },
           {
             "licenses": [
@@ -4018,7 +4122,7 @@
               "PSFL"
             ],
             "name": "py312-sqlite3",
-            "version": "3.12.14_10"
+            "version": "3.12.15_10"
           },
           {
             "licenses": [
@@ -4110,7 +4214,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.14_1"
+            "version": "3.12.15"
           },
           {
             "licenses": [
@@ -4439,7 +4543,7 @@
           {
             "name": "click",
             "purl": "",
-            "version": "8.3.1"
+            "version": "8.5.0"
           },
           {
             "name": "cryptography",
@@ -4470,6 +4574,11 @@
             "name": "flask-babel",
             "purl": "",
             "version": "4.0.0"
+          },
+          {
+            "name": "flask-simpleldap",
+            "purl": "",
+            "version": "2.1.0"
           },
           {
             "name": "greenlet",
@@ -4562,6 +4671,16 @@
             "version": "26.3"
           },
           {
+            "name": "pyasn1",
+            "purl": "",
+            "version": "0.6.4"
+          },
+          {
+            "name": "pyasn1-modules",
+            "purl": "",
+            "version": "0.4.1"
+          },
+          {
             "name": "pycountry",
             "purl": "",
             "version": "26.2.16"
@@ -4595,6 +4714,11 @@
             "name": "python-dotenv",
             "purl": "",
             "version": "1.2.3"
+          },
+          {
+            "name": "python-ldap",
+            "purl": "",
+            "version": "3.4.7"
           },
           {
             "name": "python-magic",
@@ -4644,7 +4768,7 @@
           {
             "name": "sqlite3",
             "purl": "",
-            "version": "3.12.14"
+            "version": "3.12.15"
           },
           {
             "name": "tornado",
@@ -4703,15 +4827,15 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 267,
+        "freebsd": 273,
         "go": 11,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 73,
+        "python": 77,
         "ruby": 0,
         "rust": 0,
-        "total": 351
+        "total": 361
       }
     }
   }
