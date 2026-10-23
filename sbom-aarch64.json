@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-21T17:34:52Z",
+  "generated": "2026-10-23T08:39:20Z",
   "image": "calibre-web",
   "tags": {
     "pkg-aarch64": {
       "app_version": "0.6.27_1",
       "arch": "aarch64",
-      "generated": "2026-10-21T17:33:22Z",
+      "generated": "2026-10-23T08:37:55Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -301,7 +301,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
@@ -317,7 +317,7 @@
               "CUPS"
             ],
             "name": "cups",
-            "version": "2.4.19_2"
+            "version": "2.4.20"
           },
           {
             "licenses": [
@@ -346,13 +346,6 @@
             ],
             "name": "dbus-glib",
             "version": "0.116"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
           },
           {
             "licenses": [
@@ -1071,7 +1064,7 @@
               "BSD3CLAUSE"
             ],
             "name": "libzip",
-            "version": "1.11.4"
+            "version": "1.12.1"
           },
           {
             "licenses": [
@@ -1704,7 +1697,7 @@
               "PSFL"
             ],
             "name": "py312-sqlite3",
-            "version": "3.12.14_10"
+            "version": "3.12.15_10"
           },
           {
             "licenses": [
@@ -1796,7 +1789,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.14_1"
+            "version": "3.12.15"
           },
           {
             "licenses": [
@@ -1804,13 +1797,6 @@
             ],
             "name": "readline",
             "version": "8.3.6"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
           },
           {
             "licenses": [
@@ -1832,13 +1818,6 @@
             ],
             "name": "shared-mime-info",
             "version": "2.4_2"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
           },
           {
             "licenses": [
@@ -2350,7 +2329,7 @@
           {
             "name": "sqlite3",
             "purl": "",
-            "version": "3.12.14"
+            "version": "3.12.15"
           },
           {
             "name": "tornado",
@@ -2409,7 +2388,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 273,
+        "freebsd": 270,
         "go": 11,
         "java": 0,
         "node": 0,
@@ -2417,13 +2396,13 @@
         "python": 77,
         "ruby": 0,
         "rust": 0,
-        "total": 361
+        "total": 358
       }
     },
     "pkg-latest-aarch64": {
       "app_version": "0.6.27_1",
       "arch": "aarch64",
-      "generated": "2026-10-21T17:33:27Z",
+      "generated": "2026-10-23T08:37:59Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2764,13 +2743,6 @@
             ],
             "name": "dbus-glib",
             "version": "0.116"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
           },
           {
             "licenses": [
@@ -4225,13 +4197,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
               "ZLIB"
             ],
             "name": "sdl2",
@@ -4250,13 +4215,6 @@
             ],
             "name": "shared-mime-info",
             "version": "2.4_2"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
           },
           {
             "licenses": [
@@ -4827,7 +4785,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 273,
+        "freebsd": 270,
         "go": 11,
         "java": 0,
         "node": 0,
@@ -4835,7 +4793,7 @@
         "python": 77,
         "ruby": 0,
         "rust": 0,
-        "total": 361
+        "total": 358
       }
     }
   }
