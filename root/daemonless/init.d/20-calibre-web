@@ -29,7 +29,7 @@ chown -R bsd:bsd /config
 # First-time run: create /config/app.db and /config/.key
 if [ ! -f /config/app.db ]; then
     echo "[calibre-web] First-time run, creating /config/app.db..."
-    /usr/local/bin/s6-setuidgid bsd /usr/local/bin/cps -p /config/app.db -g /config/gdrive.db -d >/dev/null 2>&1 || true
+    dsu bsd /usr/local/bin/cps -p /config/app.db -g /config/gdrive.db -d >/dev/null 2>&1 || true
 
     if [ -f /config/app.db ] && [ -f /books/metadata.db ]; then
         "${PY}" - <<'EOF'
@@ -65,7 +65,7 @@ fi
 if [ -n "${CALIBRE_ADMIN_PASSWORD}" ] && [ -f /config/app.db ]; then
     ADMIN_USER="${CALIBRE_ADMIN_USER:-admin}"
     echo "[calibre-web] Setting password for user '${ADMIN_USER}'..."
-    /usr/local/bin/s6-setuidgid bsd /usr/local/bin/cps -p /config/app.db -s "${ADMIN_USER}:${CALIBRE_ADMIN_PASSWORD}" >/dev/null 2>&1 || \
+    dsu bsd /usr/local/bin/cps -p /config/app.db -s "${ADMIN_USER}:${CALIBRE_ADMIN_PASSWORD}" >/dev/null 2>&1 || \
         echo "[calibre-web] WARNING: Could not update password for '${ADMIN_USER}'"
 fi
 

@@ -1,5 +1,5 @@
 #!/bin/sh
-# Calibre-Web s6 service
+# Start calibre-web; /init has already dropped to the run user.
 
 export HOME=/config
 export CALIBRE_DBPATH=/config
@@ -9,13 +9,10 @@ export PYTHONUNBUFFERED=1
 export LC_ALL=C.UTF-8
 export LANG=C.UTF-8
 
-# Signal readiness once the healthcheck passes (FD 3, see notification-fd)
-s6-ready-when /healthz
-
 echo "[INFO] Starting Calibre-Web on ${CALIBRE_HOST:-0.0.0.0}:8083..."
 
 cd /config
-exec /usr/local/bin/s6-setuidgid bsd \
+exec \
     /usr/local/bin/cps \
     -i "${CALIBRE_HOST:-0.0.0.0}" \
     -p /config/app.db \
