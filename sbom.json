@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-21T17:00:39Z",
+  "generated": "2026-10-23T08:15:13Z",
   "image": "calibre-web",
   "tags": {
     "pkg-amd64": {
       "app_version": "0.6.27_1",
       "arch": "amd64",
-      "generated": "2026-10-21T16:58:14Z",
+      "generated": "2026-10-23T07:51:25Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -324,7 +324,7 @@
               "CUPS"
             ],
             "name": "cups",
-            "version": "2.4.19_2"
+            "version": "2.4.20"
           },
           {
             "licenses": [
@@ -353,13 +353,6 @@
             ],
             "name": "dbus-glib",
             "version": "0.116"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
           },
           {
             "licenses": [
@@ -599,7 +592,7 @@
               "MIT"
             ],
             "name": "libX11",
-            "version": "1.8.13_1,1"
+            "version": "1.8.14,1"
           },
           {
             "licenses": [
@@ -662,7 +655,7 @@
               "MIT"
             ],
             "name": "libXi",
-            "version": "1.8.3,1"
+            "version": "1.8.4,1"
           },
           {
             "licenses": [
@@ -676,7 +669,7 @@
               "MIT"
             ],
             "name": "libXrender",
-            "version": "0.9.12"
+            "version": "0.9.13"
           },
           {
             "licenses": [
@@ -1078,7 +1071,7 @@
               "BSD3CLAUSE"
             ],
             "name": "libzip",
-            "version": "1.11.4"
+            "version": "1.12.1"
           },
           {
             "licenses": [
@@ -1814,13 +1807,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
               "ZLIB"
             ],
             "name": "sdl2",
@@ -1839,13 +1825,6 @@
             ],
             "name": "shared-mime-info",
             "version": "2.4_2"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
           },
           {
             "licenses": [
@@ -2416,7 +2395,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 274,
+        "freebsd": 271,
         "go": 11,
         "java": 0,
         "node": 0,
@@ -2424,13 +2403,13 @@
         "python": 77,
         "ruby": 0,
         "rust": 0,
-        "total": 362
+        "total": 359
       }
     },
     "pkg-latest-amd64": {
       "app_version": "0.6.27_1",
       "arch": "amd64",
-      "generated": "2026-10-21T16:59:16Z",
+      "generated": "2026-10-23T07:51:47Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2781,13 +2760,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
-          },
-          {
-            "licenses": [
               "MIT"
             ],
             "name": "expat",
@@ -2916,7 +2888,7 @@
               "MIT"
             ],
             "name": "harfbuzz",
-            "version": "14.5.1"
+            "version": "14.6.0"
           },
           {
             "licenses": [
@@ -3024,7 +2996,7 @@
               "MIT"
             ],
             "name": "libX11",
-            "version": "1.8.13_1,1"
+            "version": "1.8.14,1"
           },
           {
             "licenses": [
@@ -3087,7 +3059,7 @@
               "MIT"
             ],
             "name": "libXi",
-            "version": "1.8.3,1"
+            "version": "1.8.4,1"
           },
           {
             "licenses": [
@@ -3101,7 +3073,7 @@
               "MIT"
             ],
             "name": "libXrender",
-            "version": "0.9.12"
+            "version": "0.9.13"
           },
           {
             "licenses": [
@@ -3666,7 +3638,7 @@
               "ISCL"
             ],
             "name": "pkgconf",
-            "version": "3.0.7,1"
+            "version": "3.0.9,1"
           },
           {
             "licenses": [
@@ -4239,13 +4211,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
               "ZLIB"
             ],
             "name": "sdl2",
@@ -4264,13 +4229,6 @@
             ],
             "name": "shared-mime-info",
             "version": "2.4_2"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
           },
           {
             "licenses": [
@@ -4841,7 +4799,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 274,
+        "freebsd": 271,
         "go": 11,
         "java": 0,
         "node": 0,
@@ -4849,7 +4807,7 @@
         "python": 77,
         "ruby": 0,
         "rust": 0,
-        "total": 362
+        "total": 359
       }
     }
   }
