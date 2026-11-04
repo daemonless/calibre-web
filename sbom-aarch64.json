@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-23T08:39:20Z",
+  "generated": "2026-11-04T12:43:31Z",
   "image": "calibre-web",
   "tags": {
     "pkg-aarch64": {
       "app_version": "0.6.27_1",
       "arch": "aarch64",
-      "generated": "2026-10-23T08:37:55Z",
+      "generated": "2026-11-04T12:41:43Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -196,7 +196,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -259,7 +259,7 @@
               "APACHE20"
             ],
             "name": "ImageMagick7",
-            "version": "7.1.2.25_2"
+            "version": "7.1.2.34"
           },
           {
             "licenses": [
@@ -273,7 +273,7 @@
               "BSD2CLAUSE"
             ],
             "name": "aom",
-            "version": "3.15.1"
+            "version": "3.15.2"
           },
           {
             "licenses": [
@@ -294,14 +294,14 @@
               "MIT"
             ],
             "name": "brotli",
-            "version": "1.2.0,1"
+            "version": "1.2.1,1"
           },
           {
             "licenses": [
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
@@ -543,7 +543,7 @@
               "MIT"
             ],
             "name": "kepubify",
-            "version": "4.0.4_45"
+            "version": "4.0.4_46"
           },
           {
             "licenses": [
@@ -585,7 +585,7 @@
               "MIT"
             ],
             "name": "libX11",
-            "version": "1.8.13_1,1"
+            "version": "1.8.14,1"
           },
           {
             "licenses": [
@@ -648,7 +648,7 @@
               "MIT"
             ],
             "name": "libXi",
-            "version": "1.8.3,1"
+            "version": "1.8.4,1"
           },
           {
             "licenses": [
@@ -662,7 +662,7 @@
               "MIT"
             ],
             "name": "libXrender",
-            "version": "0.9.12"
+            "version": "0.9.13"
           },
           {
             "licenses": [
@@ -819,7 +819,7 @@
               "LGPL3+"
             ],
             "name": "libheif",
-            "version": "1.22.2_3"
+            "version": "1.23.6"
           },
           {
             "licenses": [
@@ -1754,7 +1754,7 @@
               "MIT"
             ],
             "name": "py312-wand",
-            "version": "0.7.2"
+            "version": "0.7.2_1"
           },
           {
             "licenses": [
@@ -1989,7 +1989,7 @@
           {
             "name": "stdlib",
             "purl": "",
-            "version": "v1.26.9"
+            "version": "v1.26.10"
           }
         ],
         "java": [],
@@ -2402,7 +2402,7 @@
     "pkg-latest-aarch64": {
       "app_version": "0.6.27_1",
       "arch": "aarch64",
-      "generated": "2026-10-23T08:37:59Z",
+      "generated": "2026-11-04T12:41:49Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2593,7 +2593,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -2656,7 +2656,7 @@
               "APACHE20"
             ],
             "name": "ImageMagick7",
-            "version": "7.1.2.25_2"
+            "version": "7.1.2.34"
           },
           {
             "licenses": [
@@ -2670,7 +2670,7 @@
               "BSD2CLAUSE"
             ],
             "name": "aom",
-            "version": "3.15.1"
+            "version": "3.15.2"
           },
           {
             "licenses": [
@@ -2691,14 +2691,14 @@
               "MIT"
             ],
             "name": "brotli",
-            "version": "1.2.0,1"
+            "version": "1.2.1,1"
           },
           {
             "licenses": [
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
@@ -2706,7 +2706,7 @@
               "MPL11"
             ],
             "name": "cairo",
-            "version": "1.18.2,3"
+            "version": "1.18.6,3"
           },
           {
             "licenses": [
@@ -2728,7 +2728,7 @@
               "BSD2CLAUSE"
             ],
             "name": "dav1d",
-            "version": "1.5.4"
+            "version": "1.5.4_1"
           },
           {
             "licenses": [
@@ -2757,7 +2757,7 @@
               "LGPL3+"
             ],
             "name": "ffmpeg",
-            "version": "9.0.2_2,1"
+            "version": "9.0.2_3,1"
           },
           {
             "licenses": [
@@ -2874,7 +2874,7 @@
               "MIT"
             ],
             "name": "harfbuzz",
-            "version": "14.2.1"
+            "version": "14.6.0"
           },
           {
             "licenses": [
@@ -2940,7 +2940,7 @@
               "MIT"
             ],
             "name": "kepubify",
-            "version": "4.0.4_45"
+            "version": "4.0.4_46"
           },
           {
             "licenses": [
@@ -2982,7 +2982,7 @@
               "MIT"
             ],
             "name": "libX11",
-            "version": "1.8.13_1,1"
+            "version": "1.8.14,1"
           },
           {
             "licenses": [
@@ -3045,7 +3045,7 @@
               "MIT"
             ],
             "name": "libXi",
-            "version": "1.8.3,1"
+            "version": "1.8.4,1"
           },
           {
             "licenses": [
@@ -3059,7 +3059,7 @@
               "MIT"
             ],
             "name": "libXrender",
-            "version": "0.9.12"
+            "version": "0.9.13"
           },
           {
             "licenses": [
@@ -3295,7 +3295,7 @@
               "LGPL21+"
             ],
             "name": "libplacebo",
-            "version": "7.360.1"
+            "version": "7.387.0"
           },
           {
             "licenses": [
@@ -3461,7 +3461,7 @@
               "BSD3CLAUSE"
             ],
             "name": "libzip",
-            "version": "1.11.4"
+            "version": "1.12.1"
           },
           {
             "licenses": [
@@ -3546,7 +3546,7 @@
               "BSD2CLAUSE"
             ],
             "name": "openh264",
-            "version": "2.6.0,2"
+            "version": "2.6.0_1,2"
           },
           {
             "licenses": [
@@ -3567,7 +3567,7 @@
               "OPENLDAP"
             ],
             "name": "openldap26-client",
-            "version": "2.6.15_1"
+            "version": "2.6.16"
           },
           {
             "licenses": [
@@ -3624,7 +3624,7 @@
               "ISCL"
             ],
             "name": "pkgconf",
-            "version": "3.0.7,1"
+            "version": "3.0.9,1"
           },
           {
             "licenses": [
@@ -4044,7 +4044,7 @@
               "APACHE20"
             ],
             "name": "py312-regex",
-            "version": "2026.9.10"
+            "version": "2026.9.29"
           },
           {
             "licenses": [
@@ -4151,7 +4151,7 @@
               "MIT"
             ],
             "name": "py312-wand",
-            "version": "0.7.2"
+            "version": "0.7.2_1"
           },
           {
             "licenses": [
@@ -4386,7 +4386,7 @@
           {
             "name": "stdlib",
             "purl": "",
-            "version": "v1.27.2"
+            "version": "v1.27.3"
           }
         ],
         "java": [],
@@ -4691,7 +4691,7 @@
           {
             "name": "regex",
             "purl": "",
-            "version": "2026.9.10"
+            "version": "2026.9.29"
           },
           {
             "name": "requests",
