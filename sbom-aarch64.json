@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-04T12:43:31Z",
+  "generated": "2026-11-19T04:55:42Z",
   "image": "calibre-web",
   "tags": {
     "pkg-aarch64": {
       "app_version": "0.6.27_1",
       "arch": "aarch64",
-      "generated": "2026-11-04T12:41:43Z",
+      "generated": "2026-11-19T04:52:47Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -273,7 +273,7 @@
               "BSD2CLAUSE"
             ],
             "name": "aom",
-            "version": "3.15.2"
+            "version": "3.15.3"
           },
           {
             "licenses": [
@@ -352,12 +352,12 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.8.4"
+            "version": "2.9.0"
           },
           {
             "licenses": [
-              "GPLv3+",
-              "LGPL3+"
+              "LGPL3+",
+              "GPLv3+"
             ],
             "name": "ffmpeg",
             "version": "9.0.2,1"
@@ -407,8 +407,8 @@
           },
           {
             "licenses": [
-              "GPLv3+",
-              "LGPL21+"
+              "LGPL21+",
+              "GPLv3+"
             ],
             "name": "gettext-runtime",
             "version": "1.0_1"
@@ -450,8 +450,8 @@
           },
           {
             "licenses": [
-              "GPLv3+",
-              "LGPL21+"
+              "LGPL21+",
+              "GPLv3+"
             ],
             "name": "gnutls",
             "version": "3.8.13"
@@ -543,7 +543,7 @@
               "MIT"
             ],
             "name": "kepubify",
-            "version": "4.0.4_46"
+            "version": "4.0.4_47"
           },
           {
             "licenses": [
@@ -848,7 +848,7 @@
               "BSD3CLAUSE"
             ],
             "name": "libjxl",
-            "version": "0.12.0"
+            "version": "0.12.0_1"
           },
           {
             "licenses": [
@@ -961,8 +961,8 @@
           {
             "licenses": [
               "GPLv2",
-              "LGPL3+",
-              "GFDL"
+              "GFDL",
+              "LGPL3+"
             ],
             "name": "libunistring",
             "version": "1.4.2"
@@ -1142,7 +1142,7 @@
               "BSD3CLAUSE"
             ],
             "name": "openexr",
-            "version": "3.4.16"
+            "version": "3.4.18"
           },
           {
             "licenses": [
@@ -1220,7 +1220,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.4"
+            "version": "2.9.2"
           },
           {
             "licenses": [
@@ -1335,7 +1335,7 @@
               "MPL20"
             ],
             "name": "py312-certifi",
-            "version": "2026.7.22"
+            "version": "2026.10.23"
           },
           {
             "licenses": [
@@ -1697,7 +1697,7 @@
               "PSFL"
             ],
             "name": "py312-sqlite3",
-            "version": "3.12.15_10"
+            "version": "3.12.16_10"
           },
           {
             "licenses": [
@@ -1789,7 +1789,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.15"
+            "version": "3.12.16"
           },
           {
             "licenses": [
@@ -1831,7 +1831,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           },
           {
             "licenses": [
@@ -1989,7 +1989,7 @@
           {
             "name": "stdlib",
             "purl": "",
-            "version": "v1.26.10"
+            "version": "v1.26.11"
           }
         ],
         "java": [],
@@ -2084,7 +2084,7 @@
           {
             "name": "certifi",
             "purl": "",
-            "version": "2026.7.22"
+            "version": "2026.10.23"
           },
           {
             "name": "cffi",
@@ -2329,7 +2329,7 @@
           {
             "name": "sqlite3",
             "purl": "",
-            "version": "3.12.15"
+            "version": "3.12.16"
           },
           {
             "name": "tornado",
@@ -2402,7 +2402,7 @@
     "pkg-latest-aarch64": {
       "app_version": "0.6.27_1",
       "arch": "aarch64",
-      "generated": "2026-11-04T12:41:49Z",
+      "generated": "2026-11-19T04:52:52Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2670,7 +2670,7 @@
               "BSD2CLAUSE"
             ],
             "name": "aom",
-            "version": "3.15.2"
+            "version": "3.15.3"
           },
           {
             "licenses": [
@@ -2749,12 +2749,12 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.9.0"
+            "version": "2.10.0"
           },
           {
             "licenses": [
-              "GPLv3+",
-              "LGPL3+"
+              "LGPL3+",
+              "GPLv3+"
             ],
             "name": "ffmpeg",
             "version": "9.0.2_3,1"
@@ -2786,7 +2786,7 @@
               "LGPL21"
             ],
             "name": "fribidi",
-            "version": "1.0.17"
+            "version": "1.0.18"
           },
           {
             "licenses": [
@@ -2804,8 +2804,8 @@
           },
           {
             "licenses": [
-              "GPLv3+",
-              "LGPL21+"
+              "LGPL21+",
+              "GPLv3+"
             ],
             "name": "gettext-runtime",
             "version": "1.0_1"
@@ -2847,8 +2847,8 @@
           },
           {
             "licenses": [
-              "GPLv3+",
-              "LGPL21+"
+              "LGPL21+",
+              "GPLv3+"
             ],
             "name": "gnutls",
             "version": "3.8.13"
@@ -2874,7 +2874,7 @@
               "MIT"
             ],
             "name": "harfbuzz",
-            "version": "14.6.0"
+            "version": "15.0.0"
           },
           {
             "licenses": [
@@ -2889,7 +2889,7 @@
               "GPLv2+"
             ],
             "name": "hwdata",
-            "version": "0.412,1"
+            "version": "0.413,1"
           },
           {
             "licenses": [
@@ -3317,7 +3317,7 @@
               "LGPL20"
             ],
             "name": "librsvg2-rust",
-            "version": "2.62.3_3"
+            "version": "2.63.4"
           },
           {
             "licenses": [
@@ -3358,8 +3358,8 @@
           {
             "licenses": [
               "GPLv2",
-              "LGPL3+",
-              "GFDL"
+              "GFDL",
+              "LGPL3+"
             ],
             "name": "libunistring",
             "version": "1.4.2"
@@ -3539,7 +3539,7 @@
               "BSD3CLAUSE"
             ],
             "name": "openexr",
-            "version": "3.4.16"
+            "version": "3.4.17"
           },
           {
             "licenses": [
@@ -3588,7 +3588,7 @@
               "LGPL21+"
             ],
             "name": "pango",
-            "version": "1.57.1"
+            "version": "1.58.2"
           },
           {
             "licenses": [
@@ -3617,7 +3617,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.4"
+            "version": "2.9.0"
           },
           {
             "licenses": [
@@ -3696,7 +3696,7 @@
               "BSD3CLAUSE"
             ],
             "name": "py312-asgiref",
-            "version": "3.12.1"
+            "version": "3.13.0"
           },
           {
             "licenses": [
@@ -3775,14 +3775,14 @@
               "MIT"
             ],
             "name": "py312-deprecated",
-            "version": "1.3.1"
+            "version": "3.0.0"
           },
           {
             "licenses": [
               "ISCL"
             ],
             "name": "py312-dnspython",
-            "version": "2.9.0,1"
+            "version": "2.9.2,1"
           },
           {
             "licenses": [
@@ -3859,15 +3859,15 @@
             "licenses": [
               "BSD3CLAUSE"
             ],
-            "name": "py312-httpcore",
-            "version": "1.0.9"
+            "name": "py312-httpcore2",
+            "version": "2.14.0"
           },
           {
             "licenses": [
               "BSD3CLAUSE"
             ],
-            "name": "py312-httpx",
-            "version": "0.28.1_2"
+            "name": "py312-httpx2",
+            "version": "2.14.0"
           },
           {
             "licenses": [
@@ -4002,7 +4002,7 @@
               "BSD3CLAUSE"
             ],
             "name": "py312-pypdf",
-            "version": "6.9.2"
+            "version": "6.21.4"
           },
           {
             "licenses": [
@@ -4158,7 +4158,7 @@
               "BSD3CLAUSE"
             ],
             "name": "py312-werkzeug",
-            "version": "3.1.8"
+            "version": "3.1.9"
           },
           {
             "licenses": [
@@ -4172,7 +4172,7 @@
               "BSD2CLAUSE"
             ],
             "name": "py312-wrapt",
-            "version": "2.4.1"
+            "version": "2.5.0"
           },
           {
             "licenses": [
@@ -4228,7 +4228,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           },
           {
             "licenses": [
@@ -4244,7 +4244,7 @@
               "BSD3CLAUSE"
             ],
             "name": "svt-av1",
-            "version": "4.2.0"
+            "version": "4.3.0"
           },
           {
             "licenses": [
@@ -4279,7 +4279,7 @@
               "APACHE20"
             ],
             "name": "vulkan-loader",
-            "version": "1.4.365"
+            "version": "1.4.368"
           },
           {
             "licenses": [
@@ -4307,7 +4307,7 @@
               "MIT"
             ],
             "name": "xkeyboard-config",
-            "version": "2.48"
+            "version": "2.49"
           },
           {
             "licenses": [
@@ -4399,6 +4399,11 @@
             "version": "3.11.3"
           },
           {
+            "name": "Deprecated",
+            "purl": "",
+            "version": "3.0.0"
+          },
+          {
             "name": "Flask",
             "purl": "",
             "version": "3.1.3"
@@ -4451,7 +4456,7 @@
           {
             "name": "asgiref",
             "purl": "",
-            "version": "3.12.1"
+            "version": "3.13.0"
           },
           {
             "name": "async-generator",
@@ -4509,14 +4514,9 @@
             "version": "50.0.1"
           },
           {
-            "name": "deprecated",
-            "purl": "",
-            "version": "1.3.1"
-          },
-          {
             "name": "dnspython",
             "purl": "",
-            "version": "2.9.0"
+            "version": "2.9.2"
           },
           {
             "name": "email-validator",
@@ -4559,14 +4559,14 @@
             "version": "4.2.0"
           },
           {
-            "name": "httpcore",
+            "name": "httpcore2",
             "purl": "",
-            "version": "1.0.9"
+            "version": "2.14.0"
           },
           {
-            "name": "httpx",
+            "name": "httpx2",
             "purl": "",
-            "version": "0.28.1"
+            "version": "2.14.0"
           },
           {
             "name": "hyperframe",
@@ -4661,7 +4661,7 @@
           {
             "name": "pypdf",
             "purl": "",
-            "version": "6.9.2"
+            "version": "6.21.4"
           },
           {
             "name": "pysocks",
@@ -4766,7 +4766,7 @@
           {
             "name": "werkzeug",
             "purl": "",
-            "version": "3.1.8"
+            "version": "3.1.9"
           },
           {
             "name": "wheel",
@@ -4776,7 +4776,7 @@
           {
             "name": "wrapt",
             "purl": "",
-            "version": "2.4.1"
+            "version": "2.5.0"
           }
         ],
         "ruby": [],
